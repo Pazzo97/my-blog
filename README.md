@@ -1,24 +1,59 @@
-# README
+# my-blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is project is about a blogging websites, where user can create an account, post, like a post and comment on a post.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby
+- Ruby on Rails 7 (RoR)
+- Linter: [Rubocop](https://rubocop.org/)
 
-* System dependencies
+## Getting Started
 
-* Configuration
+To get a local copy up and running follow these simple steps:
 
-* Database creation
+- visit `https://github.com/Pazzo97/my-blog.git`
+- Clone the repo or download it as zip file
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+- Make sure you already installed Ruby version 3 or higher, Rails version 6 or higher and Git.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Setup
 
-* Deployment instructions
+Clone the repository run the below commands.
 
-* ...
+- `git clone https://github.com/Pazzo97/my-blog.git`
+- cd `my-blog`
+- run rails s to start the website
+
+### Usage
+
+#### Test the application
+
+- gem install spec
+- then run 'rspec spec' in your terminal
+
+Kindly modify the files as needed.
+
+## Author
+
+👤 **Patrick MUKUNZI**
+
+- GitHub: [@Pazzo97](https://github.com/Pazzo97)
+- Twitter: [@mukunzipat](https://twitter.com/mukunzipat)
+- LinkedIn: [Patrick MUKUNZI](https://www.linkedin.com/in/patrick-mukunzi/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Pazzo97/my-blog/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](https://github.com/Pazzo97/my-blog/blob/564b0101aeacfb420a549cd2b2a886ec57deb81e/LICENSE) licensed.
