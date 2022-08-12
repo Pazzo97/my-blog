@@ -32,7 +32,7 @@ Clone the repository run the below commands.
 #### Test the application
 
 - gem install spec
-- then run 'rspec spec' in your terminal
+- then run 'rspec' in your terminal
 
 Kindly modify the files as needed.
 
