@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  subject { Comment.new(text: 'Text', user_id: 1, post_id: 1) }
+  subject { Comment.new(text: 'Text', author_id: 1, post_id: 1) }
 
   before { subject.save }
 
@@ -10,8 +10,8 @@ RSpec.describe Comment, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it 'validates the user_id is present' do
-    subject.user_id = nil
+  it 'validates the author_id is present' do
+    subject.author_id = nil
     expect(subject).to_not be_valid
   end
 

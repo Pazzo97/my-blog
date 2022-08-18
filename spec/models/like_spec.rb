@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  subject { Like.new(user_id: 1, post_id: 1) }
+  subject { Like.new(author_id: 1, post_id: 1) }
 
   before { subject.save }
 
-  it 'validates the user_id is present' do
-    subject.user_id = nil
+  it 'validates the author_id is present' do
+    subject.author_id = nil
     expect(subject).to_not be_valid
   end
 
