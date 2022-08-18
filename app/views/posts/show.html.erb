@@ -15,10 +15,13 @@
           <p>No comments for now. Be the first to comment</p>
         <% else %>
           <% @comments.each do |comment| %>
-            <p><%= comment.user.name%>: <%= comment.text%></p>
+            <p><%= comment.author.name%>: <%= comment.text%></p>
           <%end%>
         <% end %>
       </div>
+    </div>
+    <div class="btn_bottom">
+      <%= link_to "Back to posts", user_posts_path(@user), class: "btn_all_posts" %>
     </div>
   </div>
 </main> 
