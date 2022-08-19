@@ -14,7 +14,7 @@ class Post < ApplicationRecord
     self.likes_count ||= 0 # will set the default value only if it's nil
   end
 
-  after_save :update_post_counter
+  # after_save :update_post_counter
 
   def update_post_counter
     author.increment!(:posts_count)
