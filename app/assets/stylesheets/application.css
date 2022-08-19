@@ -154,7 +154,7 @@ a {
 }
 
 .btn_post_new {
-  font-size: 0.8em;
+  font-size: 20px;
   border: none;
   cursor: pointer;
   background-color: #000;
@@ -236,7 +236,7 @@ a {
 
 .btn_submit_like_from {
   width: fit-content;
-  font-size: 13px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
   background-color: #000;
