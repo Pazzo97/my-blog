@@ -4,7 +4,8 @@ class Post < ApplicationRecord
   has_many :likes, class_name: 'Like'
 
   validates :title, presence: true, length: { minimum: 3, maximum: 250 }
-  validates :comments_count, :likes_count, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
+  validates :comments_count, :likes_count, numericality: { only_integer: true },
+                                           comparison: { greater_than_or_equal_to: 0 }
 
   # after_initialize :init
 

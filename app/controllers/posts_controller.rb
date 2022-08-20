@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   def create
     @user = current_user
     @post = current_user.posts.new(post_params)
-    
+
     respond_to do |format|
       format.html do
         if @post.save
