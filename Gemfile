@@ -59,10 +59,10 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails'
-  gem "database_cleaner"
 end
 
 group :development do
@@ -70,8 +70,6 @@ group :development do
   gem 'web-console'
   # Make errors better looking
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
-  gem "capybara"
-  gem "selenium-webdriver"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
