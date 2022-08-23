@@ -43,16 +43,14 @@ RSpec.describe 'Users pages test', type: :feature do
     before :each do
       @first_user = User.create(name: 'Pazzo', photo: 'pic.png', bio: 'Teacher from Mexico')
 
-      @first_post = @first_user.posts.new(title: 'Love must lead', text: 'This is my first post')
+      @first_post = @first_user.posts.new(title: 'Hello', text: 'This is my first post')
       @first_post.likes_count = 0
       @first_post.comments_count = 0
-      @first_post.update_post_counter
       @first_post.save
 
-      @second_post = @first_user.posts.new(title: 'Being a good child', text: 'This is my second post')
+      @second_post = @first_user.posts.new(title: 'Hello world', text: 'This is my second post')
       @second_post.likes_count = 0
       @second_post.comments_count = 0
-      @second_post.update_post_counter
       @second_post.save
     end
 
@@ -75,8 +73,8 @@ RSpec.describe 'Users pages test', type: :feature do
     end
 
     it 'shows number of posts for the user' do
-      visit '/'
-      expect(page).to have_content("Number of posts: #{@first_user.updated_at_change}")
+      visit user_path(@first_user.id)
+      expect(page).to have_content('Number of posts: 2')
     end
 
     it 'Should display user bio' do

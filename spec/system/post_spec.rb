@@ -82,7 +82,6 @@ RSpec.describe 'Post pages test', type: :feature do
     end
   end
 
-
   describe 'show page' do
     before :each do
       @user = User.create(name: 'Pazzo', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico')
