@@ -80,6 +80,9 @@ GEM
       actionpack (>= 5.2)
       activemodel (>= 5.2)
     builder (3.2.4)
+    bullet (7.0.3)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.11)
     bulma-rails (0.9.3)
       sassc (~> 2.0)
     capybara (3.37.1)
@@ -256,6 +259,7 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.2.0)
+    uniform_notifier (1.16.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -280,6 +284,7 @@ DEPENDENCIES
   better_errors (~> 2.9, >= 2.9.1)
   bootsnap
   bootstrap_form
+  bullet
   bulma-rails (~> 0.9.3)
   capybara
   debug

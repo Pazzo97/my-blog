@@ -25,7 +25,7 @@ Clone the repository run the below commands.
 
 - `git clone https://github.com/Pazzo97/my-blog.git`
 - cd `my-blog`
-- run rails s to start the website
+- run `rails s` to start the website server
 
 ### Usage
 
@@ -36,7 +36,7 @@ Clone the repository run the below commands.
 
 Kindly modify the files as needed.
 
-## Author
+## Author1
 
 👤 **Patrick MUKUNZI**
 
@@ -44,6 +44,13 @@ Kindly modify the files as needed.
 - Twitter: [@mukunzipat](https://twitter.com/mukunzipat)
 - LinkedIn: [Patrick MUKUNZI](https://www.linkedin.com/in/patrick-mukunzi/)
 
+## Author2
+
+👤 **Nwachan THEOPHILE**
+
+- GitHub: [@Theophileash](https://github.com/Theophileaseh) 
+- LinkedIn: [Nwachan](https://linkedin.com/in/nwachan-theophile)
+- Twitter: [@NwachanT](https://twitter.com/NwachanT) 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
