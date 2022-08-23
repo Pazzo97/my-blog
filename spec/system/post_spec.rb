@@ -8,7 +8,6 @@ RSpec.describe 'Post pages test', type: :feature do
       @post = @user.posts.new(title: 'My story', text: 'This is my first post')
       @post.likes_count = 0
       @post.comments_count = 0
-      @post.update_post_counter
       @post.save
 
       @comment = @user.comments.new(post_id: @post.id, author_id: @user.id, text: 'My first comment')
@@ -19,7 +18,6 @@ RSpec.describe 'Post pages test', type: :feature do
       @like.author = @user
       @like.post = @post
       @like.save
-      @like.updates_likes_count
     end
 
     it 'check posts#index path' do
@@ -42,7 +40,7 @@ RSpec.describe 'Post pages test', type: :feature do
 
     it 'shows number of posts for the user' do
       visit user_posts_path(@user)
-      expect(page).to have_content("Number of posts: #{@user.updated_at_change}")
+      expect(page).to have_content('Number of posts: 1')
     end
 
     it 'Should display the post title' do
@@ -65,9 +63,9 @@ RSpec.describe 'Post pages test', type: :feature do
       expect(page).to have_content('Comment 1')
     end
 
-    it 'Should display the total post likes number of 2' do
+    it 'Should display the total post likes number of 1' do
       visit user_posts_path(@user.id)
-      expect(page).to have_content('Likes 2')
+      expect(page).to have_content('Likes 1')
     end
 
     it 'Should display a button with "Pagination" text' do
