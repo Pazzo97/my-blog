@@ -29,6 +29,15 @@ Clone the repository run the below commands.
 
 ### Usage
 
+To get Email confirmation we have used mailcatcher gem
+
+- Run `gem install mailcatcher` in your terminal
+- Run `mailcatcher` in your terminal to start the mailcatcher server
+- All incoming mails and displaying them on http://localhost:1080/
+- Run `http://localhost:1080/` in your browser tab
+- Check you email confirmation
+- Click confirm.
+
 #### Test the application
 
 - gem install spec
