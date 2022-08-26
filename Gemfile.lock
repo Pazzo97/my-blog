@@ -86,6 +86,7 @@ GEM
       uniform_notifier (~> 1.11)
     bulma-rails (0.9.3)
       sassc (~> 2.0)
+    cancancan (1.17.0)
     capybara (3.37.1)
       addressable
       matrix
@@ -312,6 +313,7 @@ DEPENDENCIES
   bootstrap_form
   bullet
   bulma-rails (~> 0.9.3)
+  cancancan (~> 1.9)
   capybara
   database_cleaner
   debug

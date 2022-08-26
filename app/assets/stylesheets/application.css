@@ -39,11 +39,11 @@ main {
 }
 
 .list {
-  width: 50%;
+  width: 75%;
 }
 
 .list2 {
-  width: 100%;
+  width: 80%;
 }
 
 .user {
@@ -275,6 +275,7 @@ a {
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
+  border-radius: 10px;
 }
 
 .btn_submit_login {
