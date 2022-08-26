@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
     <div class="app_title">
       <h1>My Blog</h1>
     </div>
-    <%= yield %>
+    <main>
+      <div class="list">
+      <div class="sign_out">
+      <% if user_signed_in? %>
+        <div>Welcome <%= current_user.name %></div>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false }, class:"btn_signout_from" %>
+      <% end %>
+    </div>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

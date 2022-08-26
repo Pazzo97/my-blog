@@ -51,8 +51,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-# Use Sass to process CSS
-# gem "sassc-rails"
+gem 'devise'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -70,6 +69,7 @@ group :development do
   gem 'web-console'
   # Make errors better looking
   gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  # gem 'letter_opener_web', '~> 2.0'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

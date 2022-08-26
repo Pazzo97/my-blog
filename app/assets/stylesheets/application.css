@@ -39,7 +39,11 @@ main {
 }
 
 .list {
-  width: 40%;
+  width: 50%;
+}
+
+.list2 {
+  width: 100%;
 }
 
 .user {
@@ -254,4 +258,35 @@ a {
   justify-content: right;
   width: 100%;
   margin-bottom: 10px;
+}
+
+.sign_out {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn_signout_from {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+.btn_submit_login {
+  width: 25%;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  border-radius: 10px;
 }
