@@ -9,12 +9,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :posts_count, numericality: { only_integer: true }, comparison: { greater_than_or_equal_to: 0 }
-
-  # after_initialize :init
-
-  # def init
-  #   self.posts_count ||= 0 # will set the default value only if it's nil
-  # end
+  validates :name, :bio, presence: true
+  validates :email, uniqueness: true
 
   def most_recent_posts
     posts.order(created_at: :desc).limit(3)

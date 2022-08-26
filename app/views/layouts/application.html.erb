@@ -14,7 +14,12 @@
     </div>
     <main>
       <div class="list">
-
+      <div class="sign_out">
+      <% if user_signed_in? %>
+        <div>Welcome <%= current_user.name %></div>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { turbo: false }, class:"btn_signout_from" %>
+      <% end %>
+    </div>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
         <%= yield %>
