@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.order(created_at: :desc).includes(:comments, :likes)
@@ -26,6 +28,23 @@ class PostsController < ApplicationController
         else
           flash.now[:error] = 'Error: Post could not be saved. Please try again.'
           render :new
+        end
+      end
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @user = @post.author_id
+    respond_to do |format|
+      format.html do
+        if @post.destroy
+          @post.author.decrement!(:posts_count)
+          flash[:success] = 'Post deleted successfully'
+          redirect_to user_posts_path(current_user)
+        else
+          flash.now[:error] = 'Error: Post could not be deleted. Please try again.'
+          redirect_to :back
         end
       end
     end
