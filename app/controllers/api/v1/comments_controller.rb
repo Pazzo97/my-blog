@@ -8,8 +8,9 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def create
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:post_id])
-    @comment = current_user.comments.new(post_id: @post.id, author_id: current_user.id, Text: comment_params)
+    @comment = @user.comments.new(post_id: @post.id, author_id: current_user.id, Text: comment_params)
     @comment.post_id = @post.id
     return unless
     @comment.save
@@ -23,7 +24,7 @@ class Api::V1::CommentsController < ApplicationController
     @user = User.find(params[:user_id])
     @posts = @user.posts.find(params[:post_id])
     @comments = @posts.comments
-  
+
     render json: @comments
   end
 
