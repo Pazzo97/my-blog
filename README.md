@@ -29,6 +29,29 @@ Clone the repository run the below commands.
 
 ### Usage
 
+### Devise and JWT Setup
+
+#### 1. Generate secret key, run the following command in your termianl:
+
+```
+ rake secret
+
+```
+
+#### 2. Open the credentials file from the terminal. by running:
+
+```
+ EDITOR=nano rails credentials:edit
+
+```
+
+#### 3. Paste in the following, with the key generated from running rake secret above.
+
+```
+devise: jwt_secret_key: <rake secret key>
+
+```
+
 To get Email confirmation we have used mailcatcher gem
 
 - Run `gem install mailcatcher` in your terminal
