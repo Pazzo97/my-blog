@@ -19,6 +19,14 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
+  def index
+    @user = User.find(params[:user_id])
+    @posts = @user.posts.find(params[:post_id])
+    @comments = @posts.comments
+  
+    render json: @comments
+  end
+
   def comment_params
     params.require(:comment).permit(:text)[:text]
   end
